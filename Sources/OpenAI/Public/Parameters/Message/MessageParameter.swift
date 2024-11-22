@@ -59,7 +59,7 @@ public struct MessageParameter: Encodable {
          switch self {
          case .text(let textContent):
             try container.encode("text", forKey: .type)
-            try container.encode(textContent, forKey: .text)
+            try container.encode(textContent.text, forKey: .text)
          case .imageURL(let imageURLContent):
             try container.encode("image_url", forKey: .type)
             try container.encode(imageURLContent, forKey: .imageURL)
